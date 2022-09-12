@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.wrapper {
+    display: flex;
+    min-height: 100%;
+    overflow: hidden;
+    flex-direction: column;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px 25px;
+    text-align: left;
+    color:#555252;
+    display: flex;
+}
+.tableWrapper {
+    margin: 0 auto;
+}
+.tableWrapper table{
+    max-width:800px;
+    width: 100%;
+    background-color: #f9f9f9;
+    border: 3px solid #f2f2f2;
+    margin:20px 0px;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.tableWrapper table th:hover {
+    cursor:default;
+    text-align: center;
+}
+.tableWrapper table th {
+    text-align: center;
+    font-weight: normal;
+    font-size: 14px;
+}
+.tableWrapper table tr>th:nth-child(2), .tableWrapper table tr>td:nth-child(2) {
+    background-color: #EEF9FE;
+}
+.tableWrapper table th, .tableWrapper table td {
+    border: 1px solid #fff;
+    padding: 5px;
+}
+.tableWrapper table tr:hover {
+    cursor: pointer;
+}
+
+.tableWrapper table .colGraph {
+    min-height: 50px;
+}
+.tableWrapper table .rowGraph {
+    opacity:0;
+}
+.tableWrapper .currentDate div{
+    text-align:right;
+}
+.tableWrapper .up{
+    background-color: #E9F4E1;
+}
+.tableWrapper .down{
+    background-color: #EEDbD6;
+}
+.tableWrapper .up div.diffPerc{
+    color:#7F935E;
+}
+.tableWrapper .down div.diffPerc{
+    color:#D7645D;
+}
+.tableWrapper .divCont {
+    display: flex;
+    justify-content:space-around;
+    font-size: 14px;
+    text-align: right;
+    white-space: nowrap;
+}
+.tableWrapper .divCont div{
+    padding:0 15px;
+}
+.tableWrapper .divCont div.divData{
+    padding-right: 0px;
+    width: 50%;
+    margin-right: 15px;
+}
+.tableWrapper .divCont div.diffPerc{
+    padding-left: 0px;
+    width: 50%;
+}
+
+.tableWrapper td:first-child div.divCont{
+    justify-content: flex-start;
+}
+.sub {
+    padding-left: 15px;
+}
+
+
+/* Landscape tablets and medium desktops */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 970px;
+    }
+}
+@media (max-width: 992px) {
+    .container {
+        max-width: 750px;
+    }
+    .tableWrapper .divCont {
+        flex-direction: column;
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+    .container {
+        max-width: none;
+        font-size: 10px;
+    }
+    .tableWrapper .divCont {
+        flex-direction: column;
+        font-size: 10px;
+    }
+    .wrapper {
+        overflow-x: auto;
+    }
+    .tableWrapper {
+        overflow-x:auto;
+    }
+}
+
+
